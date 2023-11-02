@@ -40,13 +40,39 @@ class _MyHome extends State<MyHome>
 
           const Divider(color: Colors.black),
 
-          Expanded(child: Container(child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          Expanded(child: Container(
+              margin: EdgeInsets.all(20.0),
+              child: Column(
             children: <Widget>[
-              ElevatedButton(onPressed: (){}, style : ButtonStyle(), child: Icon(Icons.looks_one)),
-              ElevatedButton(onPressed: (){}, child: Icon(Icons.looks_two)),
-              ElevatedButton(onPressed: (){}, child: Icon(Icons.looks_one)),
-              ElevatedButton(onPressed: (){}, child: Icon(Icons.looks_one)),
+              Expanded(child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  ElevatedButton( onPressed: (){}, child: Text("4", style: TextStyle(fontSize: 25))),
+                  ElevatedButton(onPressed: (){}, child: Text("5", style: TextStyle(fontSize: 25))),
+                  ElevatedButton(onPressed: (){}, child: Text("6", style: TextStyle(fontSize: 25))),
+                  ElevatedButton(onPressed: (){}, child: Text("8", style: TextStyle(fontSize: 25))),
+                ],
+              )),
+
+              Expanded(child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  ElevatedButton(onPressed: (){}, child: Text("4", style: TextStyle(fontSize: 25))),
+                  ElevatedButton(onPressed: (){}, child: Text("5", style: TextStyle(fontSize: 25))),
+                  ElevatedButton(onPressed: (){}, child: Text("6", style: TextStyle(fontSize: 25))),
+                  ElevatedButton(onPressed: (){}, child: Text("8", style: TextStyle(fontSize: 25))),
+                ],
+              )),
+
+              Expanded(child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  ElevatedButton(onPressed: (){}, child: Text("4", style: TextStyle(fontSize: 25))),
+                  ElevatedButton(onPressed: (){}, child: Text("5", style: TextStyle(fontSize: 25))),
+                  ElevatedButton(onPressed: (){}, child: Text("6", style: TextStyle(fontSize: 25))),
+                  ElevatedButton(onPressed: (){}, child: Text("8", style: TextStyle(fontSize: 25))),
+                ],
+              )),
             ],
           )))
         ],
