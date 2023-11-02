@@ -9,7 +9,6 @@ void main()
 
 class MyApp extends StatelessWidget
 {
-
   @override
   Widget build(BuildContext context)
   {
@@ -34,7 +33,24 @@ class _MyHome extends State<MyHome>
   Widget build(BuildContext context)
   {
     return Scaffold(
-      body: Center(child: Text("Hello worild")),
+      body: Column(
+
+        children: <Widget>[
+          Expanded(child: Container(color: Colors.amber)),
+
+          const Divider(color: Colors.black),
+
+          Expanded(child: Container(child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              ElevatedButton(onPressed: (){}, style : ButtonStyle(), child: Icon(Icons.looks_one)),
+              ElevatedButton(onPressed: (){}, child: Icon(Icons.looks_two)),
+              ElevatedButton(onPressed: (){}, child: Icon(Icons.looks_one)),
+              ElevatedButton(onPressed: (){}, child: Icon(Icons.looks_one)),
+            ],
+          )))
+        ],
+      ),
     );
   }
 }
