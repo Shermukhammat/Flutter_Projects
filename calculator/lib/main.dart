@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:circle_button/circle_button.dart';
 
 
 void main()
@@ -47,8 +47,31 @@ class _MyHome extends State<MyHome>
               Expanded(child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  ElevatedButton( onPressed: (){}, child: Text("4", style: TextStyle(fontSize: 25))),
-                  ElevatedButton(onPressed: (){}, child: Text("5", style: TextStyle(fontSize: 25))),
+                  CircleButton(
+                    onTap: () => {},
+                    tooltip: 'Circle Button',
+                    width: 60.0,
+                    height: 60.0,
+                    borderColor: Colors.green,
+                    borderWidth: 1.0,
+                    borderStyle: BorderStyle.solid,
+                    backgroundColor: Colors.green,
+                    child: Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
+                  ),
+  ElevatedButton(
+  style: ElevatedButton.styleFrom(
+  shape: const CircleBorder(),
+  padding: const EdgeInsets.all(30)
+  ),
+  child: const Icon(
+  Icons.add,
+  size: 50,
+  ),
+  onPressed: () {},
+  ),
                   ElevatedButton(onPressed: (){}, child: Text("6", style: TextStyle(fontSize: 25))),
                   ElevatedButton(onPressed: (){}, child: Text("8", style: TextStyle(fontSize: 25))),
                 ],
