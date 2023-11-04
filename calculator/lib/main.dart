@@ -1,103 +1,89 @@
 import 'package:flutter/material.dart';
 import 'package:circle_button/circle_button.dart';
 
-
-void main()
-{
+void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget
-{
+class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MyHome(),
     );
   }
-
 }
 
-class MyHome extends StatefulWidget
-{
+class MyHome extends StatefulWidget {
   MyHome({super.key});
 
-  State<MyHome> createState()=> _MyHome();
+  State<MyHome> createState() => _MyHome();
 }
 
-class _MyHome extends State<MyHome>
-{
+class _MyHome extends State<MyHome> {
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-
         children: <Widget>[
-          Expanded(child: Container(color: Colors.amber)),
-
+          Expanded(flex: 2 ,child: Container(color: Colors.amber)),
           const Divider(color: Colors.black),
+          Expanded(
+            flex: 3,
+              child: Container(
+                  margin: EdgeInsets.all(20.0),
+                  child: Column(
+                    children: <Widget>[
+                      Expanded(
+                          child: Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          ElevatedButton(
 
-          Expanded(child: Container(
-              margin: EdgeInsets.all(20.0),
-              child: Column(
-            children: <Widget>[
-              Expanded(child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  CircleButton(
-                    onTap: () => {},
-                    tooltip: 'Circle Button',
-                    width: 60.0,
-                    height: 60.0,
-                    borderColor: Colors.green,
-                    borderWidth: 1.0,
-                    borderStyle: BorderStyle.solid,
-                    backgroundColor: Colors.green,
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.white,
-                    ),
-                  ),
-  ElevatedButton(
-  style: ElevatedButton.styleFrom(
-  shape: const CircleBorder(),
-  padding: const EdgeInsets.all(30)
-  ),
-  child: const Icon(
-  Icons.add,
-  size: 50,
-  ),
-  onPressed: () {},
-  ),
-                  ElevatedButton(onPressed: (){}, child: Text("6", style: TextStyle(fontSize: 25))),
-                  ElevatedButton(onPressed: (){}, child: Text("8", style: TextStyle(fontSize: 25))),
-                ],
-              )),
+                            style: ElevatedButton.styleFrom(
 
-              Expanded(child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  ElevatedButton(onPressed: (){}, child: Text("4", style: TextStyle(fontSize: 25))),
-                  ElevatedButton(onPressed: (){}, child: Text("5", style: TextStyle(fontSize: 25))),
-                  ElevatedButton(onPressed: (){}, child: Text("6", style: TextStyle(fontSize: 25))),
-                  ElevatedButton(onPressed: (){}, child: Text("8", style: TextStyle(fontSize: 25))),
-                ],
-              )),
+                                backgroundColor: Colors.white70,
+                                shape: const CircleBorder(),
+                                padding: const EdgeInsets.all(30)),
 
-              Expanded(child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  ElevatedButton(onPressed: (){}, child: Text("4", style: TextStyle(fontSize: 25))),
-                  ElevatedButton(onPressed: (){}, child: Text("5", style: TextStyle(fontSize: 25))),
-                  ElevatedButton(onPressed: (){}, child: Text("6", style: TextStyle(fontSize: 25))),
-                  ElevatedButton(onPressed: (){}, child: Text("8", style: TextStyle(fontSize: 25))),
-                ],
-              )),
-            ],
-          )))
+                            child: Text("1", style: TextStyle(fontSize: 20)),
+                            onPressed: () {},
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                shape: const CircleBorder(),
+                                padding: const EdgeInsets.all(30)),
+                            child: const Icon(
+                              Icons.add,
+                              size: 15,
+                            ),
+                            onPressed: () {},
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                shape: const CircleBorder(),
+                                padding: const EdgeInsets.all(30)),
+                            child: const Icon(
+                              Icons.add,
+                              size: 15,
+                            ),
+                            onPressed: () {},
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                shape: const CircleBorder(),
+                                padding: const EdgeInsets.all(30)),
+                            child: const Icon(
+                              Icons.add,
+                              size: 15,
+                            ),
+                            onPressed: () {},
+                          ),
+                        ],
+                      )),
+                    ],
+                  )))
         ],
       ),
     );
